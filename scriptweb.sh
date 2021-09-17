@@ -1,4 +1,4 @@
 #!/bin/bash
 
-firefox localhost:4000
+firefox 192.168.1.100:4000
 
