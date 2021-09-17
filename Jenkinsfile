@@ -2,21 +2,9 @@ pipeline {
   agent any
   stages {
     stage('Git sincronizar') {
-      parallel {
-        stage('Git sincronizar') {
-          steps {
-            echo 'Sincronizacion Git correcta.'
-            input 'Esperando confirmacion manual'
-          }
-        }
-
-        stage('Copia archivos de Git') {
-          steps {
-             sh 'sshpass -p 7854 ssh Johon@192.168.1.100 \'bash -s\' < scriptWinaLin.sh'
-           
-          }
-        }
-
+      steps {
+        echo 'Sincronizacion Git correcta.'
+        input 'Esperando confirmacion manual'
       }
     }
 
