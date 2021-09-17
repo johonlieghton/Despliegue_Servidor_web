@@ -12,8 +12,12 @@ pipeline {
 
         stage('Copia archivos de Git') {
           steps {
+            try{
             sh 'sshpass -p 7854 ssh Johon@192.168.1.100 \'bash -s\' < scriptWinaLin.sh'
-            catchError(buildResult: 'Success', stageResult: 'Failure')
+            }catch (err) {
+            echo err.getMessage()
+            echo "Error detected, but we will continue."
+        }
           }
         }
 
