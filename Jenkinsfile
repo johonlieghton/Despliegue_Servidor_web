@@ -14,7 +14,7 @@ pipeline {
           steps {
             sh 'sshpass -p 7854 ssh Johon@192.168.1.100 \'bash -s\' < scriptWinaLin.sh'
             catchError(buildResult: 'Success', stageResult: 'FAILURE') {
-              sh 'exit 0'
+              sh 'exit'
             }
 
           }
