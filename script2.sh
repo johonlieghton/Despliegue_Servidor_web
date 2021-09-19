@@ -1,21 +1,31 @@
 #!/bin/bash
 
-echo "El directorio es : "
-pwd
-echo "Usuario logeado como : "
-whoami
-
-#ssh devops@192.168.1.117 'bash -s' < script.sh
-#ssh devops@192.168.1.118 
+#echo "El directorio es : "
+#pwd
+#echo "Usuario logeado como : "
+#whoami
 #sshpass -p devops ssh devops@192.168.1.118 'bash -s' < script2.sh
 
+#Nos ubicamos en el directorio del Dockerfile
 cd /home/devops/Sites/sarapico
+
+#Verificación visual del directorio
+echo "El directorio es : "
 pwd
 
-echo "Creamos Imagenes de docker --> debian y sarapico" 
 
+#Se descarga la imagen "debian" y desde esta se crea imagen "sarapico"
+echo "Creamos Imagenes de docker --> debian y sarapico" 
 docker build -t sarapico .
 
-echo "Creamos docker sarapico con --rm establece que una vez detenido se borra"
-#docker run --rm  -h sarapico.com -p 33:22 -p  4000:80 sarapico
+#Se crea el contenedor "sarapico" desde la imagen "sarapico" 
+#option -h ->nombre del dispositivo en la red es este caso sarapico.com
+#option -p -> habilita el puerto 33 externo y lo relaciona con el puerto 22 del docker
+#option -p -> habilita el puerto 4000 externo y lo relaciona con el puerto 80 del docker
+
+echo "Creamos docker sarapico 
 docker run -h sarapico.com -p 33:22 -p  4000:80 sarapico
+
+
+#Si establecemos crearlo con --rmuna vez detenido se borra"
+#docker run --rm  -h sarapico.com -p 33:22 -p  4000:80 sarapico
