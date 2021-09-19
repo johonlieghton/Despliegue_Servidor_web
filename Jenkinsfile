@@ -4,13 +4,13 @@ pipeline {
     stage('Git Sincronizar') {
       steps {
         echo 'Sincronizacion Git correcta.'
-        input 'Esperando confirmacion manual'
+        input 'Continuo ?'
       }
     }
 
     stage('Borra Imagenes y Docker') {
       steps {
-        echo 'Borra imagenes y contenedores ?'
+        echo 'Borrado de  imagenes y contenedor'
         sh '''
 sshpass -p devops ssh devops@192.168.1.118 \'bash -s\' < script.sh'''
         echo 'Imagenes y contenedores borrados.'
@@ -20,7 +20,7 @@ sshpass -p devops ssh devops@192.168.1.118 \'bash -s\' < script.sh'''
 
     stage('Armando Imagenes y contenedor') {
       steps {
-        echo 'Ejecución de armado'
+        echo 'Ejecucion de armado'
         sh 'sshpass -p devops ssh devops@192.168.1.118 \'bash\' < script2.sh'
         echo 'Imagenes y Contenedor Generados'
         input 'Despliegue Finalizado.'
