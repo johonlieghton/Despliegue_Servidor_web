@@ -29,7 +29,7 @@ sshpass -p devops ssh devops@192.168.1.118 \'bash -s\' < script.sh'''
 
     stage('Abrir navegador y web') {
       steps {
-        sh 'ssh pass -X  -p devops devops@192.168.1.118 firefox http://192.168.1.118:4000/'
+        sh 'ssh pass -X  -p devops devops@192.168.1.118 firefox http://192.168.1.118:4000'
         echo 'Despliegue correcto'
       }
     }
