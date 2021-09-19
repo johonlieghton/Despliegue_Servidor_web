@@ -6,5 +6,5 @@ echo "Usuario logeado como : "
 whoami
 
 
-~/firefox/firefox localhost:4000
+/usr/lib/firefox/firefox localhost:4000
 
