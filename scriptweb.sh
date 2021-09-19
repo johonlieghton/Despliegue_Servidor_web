@@ -5,5 +5,5 @@ pwd
 echo "Usuario logeado como : "
 whoami
 
-./firefox http://localhost:4000/
+/usr/bin/firefox 
 
