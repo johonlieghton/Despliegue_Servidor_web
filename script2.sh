@@ -18,6 +18,8 @@ pwd
 echo "Creamos Imagenes de docker --> debian y sarapico" 
 docker build -t sarapico .
 
+sleep 15
+
 #Se crea el contenedor "sarapico" desde la imagen "sarapico" 
 #option -h ->nombre del dispositivo en la red es este caso sarapico.com
 #option -p -> habilita el puerto 33 externo y lo relaciona con el puerto 22 del docker
