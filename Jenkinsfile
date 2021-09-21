@@ -12,7 +12,7 @@ pipeline {
       steps {
         echo 'Borrado de  imagenes y contenedor'
         sh '''
-sshpass -p devops ssh devops@192.168.1.118\'bash -s\' < script.sh'''
+sshpass -p devops ssh devops@192.168.1.118 \'bash -s\' < script.sh'''
         echo 'Imagenes y contenedores borrados.'
         input 'Comenzar Despliegue'
       }
