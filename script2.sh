@@ -24,7 +24,7 @@ docker build -t sarapico .
 #option -p -> habilita el puerto 4000 externo y lo relaciona con el puerto 80 del docker
 
 echo "Creamos docker sarapico 
-docker run -h sarapico.com -p 33:22 -p 4000:80 sarapico
+docker run --name sarapico -h sarapico.com -p 33:22 -p 4000:80 sarapico
 
 
 #Si establecemos crearlo con --rm una vez detenido se borra"
