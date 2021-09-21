@@ -27,5 +27,5 @@ echo "Creamos docker sarapico
 docker run -h sarapico.com -p 33:22 -p  4000:80 sarapico
 
 
-#Si establecemos crearlo con --rmuna vez detenido se borra"
+#Si establecemos crearlo con --rm una vez detenido se borra"
 #docker run --rm  -h sarapico.com -p 33:22 -p  4000:80 sarapico
