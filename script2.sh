@@ -25,6 +25,7 @@ sleep 15
 #option -p -> habilita el puerto 33 externo y lo relaciona con el puerto 22 del docker
 #option -p -> habilita el puerto 4000 externo y lo relaciona con el puerto 80 del docker
 
+
 echo "Creamos docker sarapico 
 #docker run  -h sarapico.com -p 33:22 -p 4000:80 sarapico
 
