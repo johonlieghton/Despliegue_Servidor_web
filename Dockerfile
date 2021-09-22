@@ -23,7 +23,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 #Exponemos el puerto 80 
 EXPOSE 80
 
-#Copiamos los componentes de nuestra web al directorio "html"
+#Copiamos archivos de debian al directorio "html"
 COPY [".","/var/www/html/"]
 
 #Para establecer el ejecutable que se lanza cuando se crea el contenedor con docker run
