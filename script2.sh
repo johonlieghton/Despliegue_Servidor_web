@@ -30,6 +30,4 @@ echo "Creamos docker sarapico
 
 
 #Si establecemos crearlo con --rm una vez detenido se borra"
-#docker run --rm  -h sarapico.com -p 33:22 -p  4000:80 sarapico
-
-docker run -d -p  -h sarapico.com -p 33:22 -p  4000:80 sarapico
+docker run --rm  -h sarapico.com -p 33:22 -p  4000:80 sarapico
